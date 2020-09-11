@@ -1,10 +1,14 @@
 const orm = require("./config/orm");
 
-orm.selectAll("burgers", function (data) {
+orm.getAll("burgers", function (data) {
   console.table(data);
 
-  orm.insertOne("burgers", "burger_name", "Royale with Cheese", function (data){
-    console.log(data);
-  })
-  
+  orm.update("burgers", "devoured", true, { 
+    where: {
+    id: 12,
+  }, 
+  });
+  orm.getAll("burgers", function (taco) {
+    console.table(taco);
+  });
 });

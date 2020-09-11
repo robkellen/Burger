@@ -4,7 +4,7 @@ const connection = require("../config/connection");
 //create methods to execute MySQL commands in controllers
 const orm = {
   //method to select all burgers from burgers table
-  selectAll: function (table, cb) {
+  getAll: function (table, cb) {
     const queryString = "SELECT * FROM ??";
     connection.query(queryString, [table], function (err, data) {
       if (err) {
@@ -15,18 +15,29 @@ const orm = {
     });
   },
   //method to insert a burger into the db
-  insertOne: function (table, column, value, cb) {
+  insert: function (table, column, value, cb) {
     const queryString = "INSERT INTO ?? (??) VALUES (?)";
     console.log(queryString);
-    connection.query(queryString, [table, column, value], function (err, res){
-      if (err){
-        res.status(500).end();
-      }
+    connection.query(queryString, [table, column, value], function (err, data) {
+      if (err) console.log(error);
       cb(data);
-    })
+    });
   },
   //method to update a burger in the db
-  // updateOne: function () {},
+  update: function (table, column, value, { where }, cb) {
+    const queryString = "UPDATE ?? SET ??=? WHERE ?";
+    console.log(queryString);
+    connection.query(queryString, [table, column, value, where], function (
+      err,
+      data
+    ) {
+      if (err) {
+        console.log(err);
+      }
+      // console.log(data);
+      cb(data);
+    });
+  },
 };
 
 module.exports = orm;
