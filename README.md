@@ -15,6 +15,8 @@
 ## Description
 This application allows the user to name a burger or multiple burgers of their choice, and then devour each burger.  
 
+![Eat Da Burger GIF](EatDaBurger.gif)
+
 
 ## Installation 
 The applicatoin requires no installation to use.  It is deployed through Heroku and can be run by [clicking this link](https://intense-headland-97651.herokuapp.com/) to open the page in your default browser.
@@ -37,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 To contribute to this project please email me at rob.h.kellen@gmail.com.
 
 ## Tests
-To test the functionality of this app please give it a try!
+To test the functionality of this app please give it a try on the webpage, or fork the repo to test out the code.  
   
 ## Questions
 Please email me at rob.h.kellen@gmail.com with any questions about this project.  You can also see more of my work by visiting my GitHub profile at [robkellen](https://github.com{userName}).
