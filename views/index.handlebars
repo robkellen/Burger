@@ -1,4 +1,19 @@
 {{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 <img src="./public/img/eat-da-burger.png" alt="image of burger">
+<h1>Eat Da Burger!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Have a Taste!</h2>
+      <ul class="list-group">
+        {{#each burgers}}
+          {{#unless devoured}}
+          <liclass="list-group-item">{{id}}.{{burger_name}} <buttonclass="btn devourBtn" data-id="{{id}}">Gobble me down!</button></li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
 
 {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
