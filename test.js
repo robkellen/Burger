@@ -1,14 +1,10 @@
-const orm = require("./config/orm");
+const orm = require("./config/orm")
+const burger = require("./models/burger");
 
-orm.getAll("burgers", function (data) {
-  console.table(data);
+burger.getAll();
+console.table("burgers");
 
-  orm.update("burgers", "devoured", true, { 
-    where: {
-    id: 12,
-  }, 
-  });
-  orm.getAll("burgers", function (taco) {
-    console.table(taco);
-  });
-});
+burger.insert("burger_name", "devoured", "spicy", 0);
+
+burger.getAll();
+console.table("burgers");

@@ -1,6 +1,6 @@
 const express = require("express");
 // Create the router for the app
-const router = express.router();
+const router = express.Router();
 //import the burger.js model to use db functions
 const burger = require("../models/burger")
 
