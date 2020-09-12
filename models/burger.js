@@ -4,8 +4,7 @@ const orm = require("../config/orm.js");
 var burger = {
   getAll: function (cb) {
     orm.getAll("burgers", function (data) {
-      // cb(data);
-      console.table(data);
+      cb(data);
     });
   },
   insert: function (columnName, columnUnique, valueName, valueUnique, cb) {
@@ -16,8 +15,7 @@ var burger = {
       valueName,
       valueUnique,
       function (data) {
-        console.table(data);
-        // cb(data);
+        cb(data);
       }
     );
   },
@@ -29,7 +27,7 @@ var burger = {
       idColumn,
       idValue,
       function (data) {
-        // cb(data);
+        cb(data);
       }
     );
   },

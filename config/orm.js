@@ -34,14 +34,12 @@ const orm = {
   //method to update a burger in the db
   update: function (table, columnUnique, valueUnique, idColumn, idValue, cb) {
     const queryString = "UPDATE ?? SET ??=? WHERE ??=?";
-    console.log(queryString);
     connection.query(
       queryString,
       [table, columnUnique, valueUnique, idColumn, idValue],
-      function (err, result) {
+      function (err, data) {
         if (err) console.log(err);
-        console.log(data);
-        cb(result);
+        cb(data);
       }
     );
   },
