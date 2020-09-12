@@ -31,6 +31,11 @@ var burger = {
       }
     );
   },
+  delete: function (idValue, cb) {
+    orm.delete("burgers", idValue, function (data) {
+      cb(data);
+    });
+  },
 };
 
 module.exports = burger;

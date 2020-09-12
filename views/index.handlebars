@@ -21,6 +21,7 @@
     <div class="col-md-4">
       <h2 class="text-center">Have a Taste!</h2>
       <ul class="list-group text-center">
+        {{!-- list each burger from the database upon entry with button to gobble down the burger --}}
         {{#each burgers}}
         {{#unless devoured}}
         <li class="list-group-item"> {{id}}. {{burger_name}}
@@ -35,9 +36,11 @@
     <div class="col-md-4">
       <h2 class="text-center">Clean Plate Club!</h2>
       <ul class="list-group text-center">
+        {{!-- move each eaten burger to new list after user gobbles it down --}}
+        {{!-- Add new button for user to clear their plate and delete the burger from the db --}}
         {{#each burgers}}
         {{#if devoured}}
-        <li class="list-group-item"> {{id}}. {{burger_name}} </li>
+        <li class="list-group-item"> {{id}}. {{burger_name}} <button class="btn btn-sm btn-danger clearBtn" data-id="{{id}}">Clear your plate!</button></li>
         {{/if}}
         {{/each}}
       </ul>
@@ -45,4 +48,3 @@
   </div>
 </div>
 
-{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}

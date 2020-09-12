@@ -36,6 +36,16 @@ router.put("/api/burgers/:id", function (req, res) {
     }
   });
 });
+router.delete("/api/burgers/:id", function (req, res){
+  let idValue = req.params.id;
+  burger.delete(idValue, function (res){
+    if (result.affectedRows == 0){
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  })
+})
 
 // export the router at the end of your file.
 module.exports = router;

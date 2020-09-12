@@ -43,6 +43,13 @@ const orm = {
       }
     );
   },
+  //method to delete a burger in the db
+  delete: function (table, idValue, cb);
+  const queryString = "DELETE FROM ?? WHERE ?";
+  connection.query(queryString, [table, idValue], function (err, data){
+    if (err) console.log(error);
+    cb(data);
+  })
 };
 
 module.exports = orm;
