@@ -13,7 +13,7 @@
     
   
 ## Description
-This application allows the user to name a burger or multiple burgers of their choice, and then devour each burger.  
+This application allows the user to log a burger or multiple burgers of their choice, and then devour each burger.  It was created with MySQL, Node, Express, Handlebars and a homemade ORM following the MVC design pattern.
 
 ![Eat Da Burger GIF](EatDaBurger.gif)
 
