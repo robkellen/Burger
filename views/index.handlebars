@@ -9,10 +9,10 @@
         <div class="form-group">
           <label for="newBurg">Burger Name:</label>
           <input type="text" id="newBurg" name="name">
+        <button type="submit" class="btn btn-success addBurgBtn">Add Burger</button>
         </div>
 
 
-        <button type="submit" class="btn btn-success addBurgBtn">Add a Burger</button>
 
       </form>
     </div>
@@ -37,7 +37,7 @@
       <ul class="list-group text-center">
         {{#each burgers}}
         {{#if devoured}}
-        <li class="list-group-item">{{id}}.{{burger_name}} </li>
+        <li class="list-group-item"> {{id}}. {{burger_name}} </li>
         {{/if}}
         {{/each}}
       </ul>
