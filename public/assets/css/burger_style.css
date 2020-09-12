@@ -1,4 +1,7 @@
 #burgerPic {
- margin-right: 30px;
+ margin-right: auto;
+ margin-left: auto;
   max-width: 300px;
+  display: block;
+  
 }

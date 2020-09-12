@@ -1,14 +1,14 @@
 {{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 <div class="container">
-<img src="/assets/img/eat-da-burger.png" alt="image of burger" id="burgerPic" >
+<img src="/assets/img/eat-da-burger.png" alt="image of burger" id="burgerPic" class="center">
 <h1 class="text-center">Eat Da Burger!</h1>
   <div class="row">
     <div class="col-md-3">
       <h2>Have a Taste!</h2>
-      <ul class="list-group">
+      <ul class="list-group text-center">
         {{#each burgers}}
           {{#unless devoured}}
-          <li class="list-group-item"> {{id}}.{{burger_name}} <button class="btn btn-sm devourBtn" data-id="{{id}}">Gobble me down!</button></li>
+          <li class="list-group-item"> {{id}}.{{burger_name}} <button class="btn btn-sm btn-primary devourBtn" data-id="{{id}}">Gobble me down!</button></li>
           {{/unless}}
         {{/each}}
       </ul>
